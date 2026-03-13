@@ -15,12 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23003CFF'/><text x='50' y='68' font-family='Arial' font-size='60' font-weight='bold' fill='white' text-anchor='middle'>1</text></svg>">
-    
-    <!-- Meta -->
-    <meta name="theme-color" content="#003CFF">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230066FF'/><text x='50' y='68' font-family='Arial' font-size='60' font-weight='bold' fill='white' text-anchor='middle'>1</text></svg>">
     
     <style>
         /* ===== СБРОС И БАЗОВЫЕ СТИЛИ ===== */
@@ -29,21 +24,17 @@
             padding: 0;
             box-sizing: border-box;
             -webkit-tap-highlight-color: transparent;
-            font-family: 'Poppins', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            font-family: 'Poppins', 'Inter', sans-serif;
         }
 
         :root {
-            /* ТЕМНО-СИНИЕ ГРАДИЕНТЫ */
-            --primary-gradient: linear-gradient(135deg, #003CFF 0%, #002BB5 100%);
-            --secondary-gradient: linear-gradient(135deg, #0A1E3A 0%, #1A2F5A 100%);
+            --primary-gradient: linear-gradient(135deg, #0066FF 0%, #0044CC 100%);
             --dark-bg: #0A0F1F;
-            --card-bg: rgba(18, 28, 48, 0.8);
+            --card-bg: rgba(18, 28, 48, 0.85);
             --text-primary: #FFFFFF;
             --text-secondary: #A0B4D6;
-            --accent-blue: #003CFF;
-            --accent-blue-dark: #002BB5;
+            --accent-blue: #0066FF;
             --accent-red: #8B0000;
-            --accent-red-dark: #B22222;
             --accent-green: #00FF88;
             --accent-gold: #FFD700;
             --accent-dark-green: #0a4d2a;
@@ -54,7 +45,6 @@
             color: var(--text-primary);
             min-height: 100vh;
             overflow-x: hidden;
-            position: relative;
             font-family: 'Poppins', sans-serif;
         }
 
@@ -109,7 +99,7 @@
         }
 
         @keyframes floorFall {
-            0% { transform: translateY(-200px) scale(0.5); opacity: 0; }
+            0% { transform: translateY(-200px) scale(0.8); opacity: 0; }
             70% { transform: translateY(5px) scale(1.02); }
             100% { transform: translateY(0) scale(1); opacity: 1; }
         }
@@ -227,7 +217,7 @@
         }
 
         .header-signals {
-            background: rgba(0, 60, 255, 0.5);
+            background: rgba(0, 102, 255, 0.5);
             padding: 6px 16px;
             border-radius: 40px;
             font-size: 18px;
@@ -289,7 +279,7 @@
             justify-content: center;
             font-size: 50px;
             color: white;
-            box-shadow: 0 20px 40px rgba(0, 60, 255, 0.4);
+            box-shadow: 0 20px 40px rgba(0, 102, 255, 0.4);
             animation: float 3s ease-in-out infinite;
             border: 3px solid rgba(255, 255, 255, 0.1);
         }
@@ -357,12 +347,12 @@
 
         .btn-flat.primary {
             background: var(--primary-gradient);
-            border-color: rgba(0, 60, 255, 0.4);
-            box-shadow: 0 8px 20px rgba(0, 60, 255, 0.3);
+            border-color: rgba(0, 102, 255, 0.4);
+            box-shadow: 0 8px 20px rgba(0, 102, 255, 0.3);
         }
 
         .btn-flat.secondary {
-            background: linear-gradient(135deg, var(--accent-red), var(--accent-red-dark));
+            background: linear-gradient(135deg, var(--accent-red), #B22222);
             border-color: rgba(139, 0, 0, 0.4);
         }
 
@@ -504,7 +494,7 @@
             font-weight: 900;
             letter-spacing: 3px;
             color: white;
-            text-shadow: 0 0 20px var(--accent-red), 0 0 40px var(--accent-red-dark);
+            text-shadow: 0 0 20px var(--accent-red), 0 0 40px #B22222;
             font-family: 'Courier New', monospace;
             cursor: pointer;
             transition: all 0.2s ease;
@@ -526,7 +516,7 @@
             background: var(--card-bg);
             border-radius: 24px;
             padding: 24px;
-            border: 1px solid rgba(0, 60, 255, 0.2);
+            border: 1px solid rgba(0, 102, 255, 0.2);
             margin: 20px 0;
             animation: slideUp 0.4s ease;
         }
@@ -534,8 +524,8 @@
         .id-card h2 { font-size: 24px; margin-bottom: 10px; }
 
         .id-hint-box {
-            background: rgba(0, 60, 255, 0.1);
-            border: 1px solid rgba(0, 60, 255, 0.3);
+            background: rgba(0, 102, 255, 0.1);
+            border: 1px solid rgba(0, 102, 255, 0.3);
             border-radius: 18px;
             padding: 18px;
             margin: 24px 0;
@@ -550,7 +540,7 @@
         input#user-id {
             width: 100%;
             padding: 18px 50px 18px 20px;
-            border: 2px solid rgba(0, 60, 255, 0.5);
+            border: 2px solid rgba(0, 102, 255, 0.5);
             border-radius: 18px;
             background: rgba(10, 20, 41, 0.8);
             color: white;
@@ -565,7 +555,7 @@
         input#user-id:focus {
             outline: none;
             border-color: var(--accent-blue);
-            box-shadow: 0 0 20px rgba(0,60,255,0.5);
+            box-shadow: 0 0 20px rgba(0,102,255,0.5);
             transform: scale(1.02);
         }
 
@@ -622,14 +612,13 @@
         .game-card:hover {
             border-color: var(--accent-blue);
             transform: translateY(-5px) scale(1.02);
-            box-shadow: 0 10px 30px rgba(0,60,255,0.3);
+            box-shadow: 0 10px 30px rgba(0,102,255,0.3);
         }
 
         .game-card:active {
             transform: translateY(2px) scale(0.98);
         }
 
-        /* Фоновые изображения для игр */
         .game-card[data-game="mines"] {
             background-image: url('https://one-vv893.com/resources/v1/optimizeimages/unsafe/casino_game_card_x1/plain/https://v1.bundlecdn.com/casino-images/v/b3739588-076d-42f5-9287-96f476e21dc7_vertical.png@avif');
         }
@@ -723,7 +712,7 @@
             border-radius: 8px;
         }
 
-        /* ===== НИЖНЕЕ МЕНЮ ===== */
+        /* ===== НИЖНЕЕ МЕНЮ (ИСПРАВЛЕННОЕ) ===== */
         .bottom-nav-container {
             padding: 0 16px 20px;
             margin-top: 20px;
@@ -741,7 +730,8 @@
             border-radius: 40px;
             display: flex;
             justify-content: space-around;
-            padding: 8px;
+            align-items: center;
+            padding: 6px;
             border: 1px solid rgba(255, 255, 255, 0.08);
             box-shadow: 0 8px 25px rgba(0,0,0,0.5);
         }
@@ -750,11 +740,14 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 8px 16px;
+            justify-content: center;
+            padding: 8px 0;
             border-radius: 30px;
             cursor: pointer;
             transition: all 0.2s ease;
             opacity: 0.6;
+            flex: 1;
+            text-align: center;
         }
 
         .nav-item-flat:hover {
@@ -763,14 +756,28 @@
         }
 
         .nav-item-flat.active {
-            background: rgba(0, 60, 255, 0.2);
+            background: rgba(0, 102, 255, 0.2);
             opacity: 1;
         }
 
-        .nav-icon-flat { font-size: 22px; transition: all 0.2s ease; }
-        .nav-label-flat { font-size: 11px; font-weight: 700; color: var(--text-secondary); text-transform: uppercase; }
+        .nav-icon-flat { 
+            font-size: 22px; 
+            transition: all 0.2s ease; 
+            margin-bottom: 2px;
+        }
+
+        .nav-label-flat { 
+            font-size: 11px; 
+            font-weight: 700; 
+            color: var(--text-secondary); 
+            text-transform: uppercase; 
+            line-height: 1.2;
+        }
+
         .nav-item-flat.active .nav-icon-flat,
-        .nav-item-flat.active .nav-label-flat { color: var(--accent-blue); }
+        .nav-item-flat.active .nav-label-flat { 
+            color: var(--accent-blue); 
+        }
 
         /* ===== ПРОФИЛЬ ===== */
         .profile-header-card {
@@ -778,7 +785,7 @@
             border-radius: 30px;
             padding: 30px 20px;
             margin: 16px;
-            border: 1px solid rgba(0,60,255,0.2);
+            border: 1px solid rgba(0,102,255,0.2);
             box-shadow: 0 20px 40px rgba(0,0,0,0.6);
             display: flex;
             flex-direction: column;
@@ -797,7 +804,7 @@
             font-size: 50px;
             margin-bottom: 16px;
             border: 4px solid rgba(255,255,255,0.2);
-            box-shadow: 0 10px 30px rgba(0,60,255,0.6);
+            box-shadow: 0 10px 30px rgba(0,102,255,0.6);
             animation: float 3s ease-in-out infinite;
         }
 
@@ -866,7 +873,7 @@
             border-radius: 24px;
             padding: 20px;
             margin: 16px;
-            border: 1px solid rgba(0,60,255,0.2);
+            border: 1px solid rgba(0,102,255,0.2);
             animation: slideUp 0.4s ease;
         }
 
@@ -937,7 +944,7 @@
         .game-title-text {
             font-size: 28px;
             font-weight: 900;
-            background: var(--primary-gradient);
+            background: linear-gradient(135deg, #0066FF, #0044CC);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -1112,7 +1119,7 @@
         }
 
         .coin-face.front {
-            background: linear-gradient(135deg, #003CFF, #002BB5);
+            background: linear-gradient(135deg, #0066FF, #0044CC);
             border: 6px solid #FFD700;
             color: #FFD700;
         }
@@ -1128,8 +1135,8 @@
 
         .coin-face.back {
             background: linear-gradient(135deg, #FFD700, #FFA500);
-            border: 6px solid #003CFF;
-            color: #003CFF;
+            border: 6px solid #0066FF;
+            color: #0066FF;
             transform: rotateY(180deg);
         }
 
@@ -1137,7 +1144,7 @@
             font-size: 50px;
         }
 
-        /* ===== TOWER RUSH ===== */
+        /* ===== TOWER RUSH (ИСПРАВЛЕННАЯ) ===== */
         .tower-wrapper {
             background: linear-gradient(180deg, #000814 0%, #001233 100%);
             border-radius: 30px;
@@ -1145,8 +1152,7 @@
             margin: 15px 0;
             border: 3px solid var(--accent-gold);
             position: relative;
-            min-height: 400px;
-            max-height: 400px;
+            height: 400px;
             overflow: hidden;
             box-shadow: inset 0 0 50px rgba(0,0,0,0.8);
             display: flex;
@@ -1242,10 +1248,10 @@
             position: relative;
             z-index: 15;
             height: 100%;
-            max-height: 320px;
-            margin-bottom: 60px;
+            width: 100%;
+            padding-bottom: 0;
+            margin-bottom: 0;
             overflow: visible;
-            padding-bottom: 2px;
         }
 
         .tower-floor-block {
@@ -1257,8 +1263,9 @@
             box-shadow: 0 4px 0 #5d3a1a, 0 6px 12px rgba(0,0,0,0.5);
             animation: floorFall 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             transform-origin: top;
-            margin-bottom: 2px;
+            margin-bottom: 0;
             height: 40px;
+            flex-shrink: 0;
         }
 
         .floor-grid {
@@ -1308,7 +1315,7 @@
 
         .signal-button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(0,60,255,0.4);
+            box-shadow: 0 10px 30px rgba(0,102,255,0.4);
         }
 
         .signal-button:active {
@@ -1415,13 +1422,13 @@
             transition: all 0.2s ease;
         }
 
-        .modal-button.confirm {
-            background: var(--primary-gradient);
+        .modal-button.cancel {
+            background: #2A3545;
             color: white;
         }
 
-        .modal-button.cancel {
-            background: #2A3545;
+        .modal-button.confirm {
+            background: linear-gradient(135deg, var(--accent-red), #B22222);
             color: white;
         }
 
@@ -1560,7 +1567,6 @@
                 </div>
 
                 <div class="games-grid" id="games-grid">
-                    <!-- Mines -->
                     <div class="game-card" data-game="mines">
                         <div class="game-content">
                             <div class="game-title" id="game-mines-title">Mines</div>
@@ -1570,7 +1576,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Penalty -->
                     <div class="game-card" data-game="penalty">
                         <div class="game-content">
                             <div class="game-title" id="game-penalty-title">Penalty</div>
@@ -1580,7 +1585,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Coin Flip -->
                     <div class="game-card" data-game="coinflip">
                         <div class="game-content">
                             <div class="game-title" id="game-coinflip-title">Coin Flip</div>
@@ -1590,7 +1594,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Tower Rush -->
                     <div class="game-card" data-game="tower">
                         <div class="game-content">
                             <div class="game-title" id="game-tower-title">Tower Rush</div>
@@ -1735,12 +1738,10 @@
         // ===== ПЕРЕВОДЫ =====
         const translations = {
             ru: {
-                // Общее
                 online: 'Онлайн',
                 backToMenu: '← В МЕНЮ',
                 getSignal: 'ПОЛУЧИТЬ СИГНАЛ',
                 
-                // Инструкция
                 important: 'ВАЖНО!',
                 mandatory: '❗ ОБЯЗАТЕЛЬНО К ПРОЧТЕНИЮ ❗',
                 expand: 'Развернуть',
@@ -1758,7 +1759,6 @@
                                 <p>🟢 2. Подключите аккаунт к боту в разделе <strong>Профиль</strong>.</p>
                                 <p>🟢 3. Запросите сигнал и ставьте строго по нему. 💰🚀</p>`,
                 
-                // Авторизация
                 authTitle: 'ВВЕДИТЕ ВАШ ID',
                 authSubtitle: 'Убедитесь, что вы выполнили условия регистрации.',
                 yourId: 'ВАШ 1WIN ID',
@@ -1766,7 +1766,6 @@
                 idHint: '<strong>Где найти мой ID?</strong><br><br>Откройте приложение 1WIN и нажмите на кнопку Меню 📱<br>На телефоне - ваш ID отображается слева сверху, под именем аккаунта<br>На компьютере - нажмите на иконку профиля слева сверху, ID будет под именем 💻',
                 enterSystem: 'ВОЙТИ В СИСТЕМУ',
                 
-                // Главный экран
                 gameMines: 'Mines',
                 gamePenalty: 'Penalty',
                 gameCoinflip: 'Coin Flip',
@@ -1774,26 +1773,21 @@
                 signal: 'Сигнал',
                 promoWarning: '⚠️ ЕСЛИ ВЫ НЕ УКАЗАЛИ ПРОМОКОД <strong>Pill2cb</strong> ПРИ РЕГИСТРАЦИИ,<br>ТО СИГНАЛЫ БУДУТ НЕ ПРАВИЛЬНЫЕ!',
                 
-                // Навигация
                 navGames: 'ИГРЫ',
                 navProfile: 'ПРОФИЛЬ',
                 navGuide: 'ИНСТРУКЦИЯ',
                 
-                // Профиль
                 signalsMade: 'СИГНАЛОВ СДЕЛАНО',
                 changeId: 'Изменить ID',
                 
-                // Инструкция из меню
                 officialLink: 'Официальная ссылка для корректной работы:',
                 promoClick: 'Промокод (нажмите, чтобы скопировать):',
                 
-                // Модальное окно
                 warningTitle: '⚠️ ВНИМАНИЕ!',
                 warningText: 'ЕСЛИ ВЫ НЕ УКАЗАЛИ ПРОМОКОД <strong>Pill2cb</strong> ПРИ РЕГИСТРАЦИИ,<br>ТО СИГНАЛЫ БУДУТ НЕВЕРНЫМИ!',
                 cancel: 'Отмена',
                 confirm: 'Я ввел промокод',
                 
-                // Игры
                 mines: 'MINES',
                 minesStatus: 'Нажми кнопку для сигнала',
                 minesGenerating: 'Получение сигнала...',
@@ -1813,15 +1807,18 @@
                 tower: 'TOWER RUSH',
                 towerStatus: 'Нажми для прогноза этажей',
                 towerGenerating: 'Строим башню...',
-                towerSuccess: '✅ Построено этажей:'
+                towerSuccess: '✅ Построено этажей:',
+                
+                changeIdTitle: 'СМЕНА ID',
+                changeIdText: 'Вы действительно хотите изменить ID?<br>Текущая сессия будет сброшена.',
+                changeIdCancel: 'Отмена',
+                changeIdConfirm: 'Да, сменить'
             },
             en: {
-                // General
                 online: 'Online',
                 backToMenu: '← BACK TO MENU',
                 getSignal: 'GET SIGNAL',
                 
-                // Instruction
                 important: 'IMPORTANT!',
                 mandatory: '❗ REQUIRED READING ❗',
                 expand: 'Expand',
@@ -1839,7 +1836,6 @@
                                 <p>🟢 2. Connect your account to the bot in the <strong>Profile</strong> section.</p>
                                 <p>🟢 3. Request a signal and bet strictly according to it. 💰🚀</p>`,
                 
-                // Authorization
                 authTitle: 'ENTER YOUR ID',
                 authSubtitle: 'Make sure you have completed the registration conditions.',
                 yourId: 'YOUR 1WIN ID',
@@ -1847,7 +1843,6 @@
                 idHint: '<strong>Where to find my ID?</strong><br><br>Open the 1WIN app and click the Menu button 📱<br>On phone - your ID is displayed at the top left, under the account name<br>On computer - click the profile icon at the top left, ID will be under the name 💻',
                 enterSystem: 'ENTER SYSTEM',
                 
-                // Main screen
                 gameMines: 'Mines',
                 gamePenalty: 'Penalty',
                 gameCoinflip: 'Coin Flip',
@@ -1855,26 +1850,21 @@
                 signal: 'Signal',
                 promoWarning: '⚠️ IF YOU DID NOT SPECIFY THE PROMO CODE <strong>Pill2cb</strong> DURING REGISTRATION,<br>THE SIGNALS WILL BE INCORRECT!',
                 
-                // Navigation
                 navGames: 'GAMES',
                 navProfile: 'PROFILE',
                 navGuide: 'GUIDE',
                 
-                // Profile
                 signalsMade: 'SIGNALS MADE',
                 changeId: 'Change ID',
                 
-                // Instruction from menu
                 officialLink: 'The only official link to 1WIN website:',
                 promoClick: 'Promo code (click to copy):',
                 
-                // Modal window
                 warningTitle: '⚠️ ATTENTION!',
                 warningText: 'IF YOU DID NOT SPECIFY THE PROMO CODE <strong>Pill2cb</strong> DURING REGISTRATION,<br>THE SIGNALS WILL BE INCORRECT!',
                 cancel: 'Cancel',
                 confirm: 'I entered the promo code',
                 
-                // Games
                 mines: 'MINES',
                 minesStatus: 'Press button for signal',
                 minesGenerating: 'Getting signal...',
@@ -1894,7 +1884,12 @@
                 tower: 'TOWER RUSH',
                 towerStatus: 'Press to predict floors',
                 towerGenerating: 'Building tower...',
-                towerSuccess: '✅ Floors built:'
+                towerSuccess: '✅ Floors built:',
+                
+                changeIdTitle: 'CHANGE ID',
+                changeIdText: 'Do you really want to change ID?<br>The current session will be reset.',
+                changeIdCancel: 'Cancel',
+                changeIdConfirm: 'Yes, change'
             }
         };
 
@@ -1921,7 +1916,6 @@
             gameWarningModal: document.getElementById('game-warning-modal')
         };
 
-        // Создание точек на фоне
         function createDots() {
             const bg = document.getElementById('dotsBackground');
             bg.innerHTML = '';
@@ -1935,7 +1929,6 @@
             }
         }
 
-        // Загрузка данных
         function loadSavedData() {
             const savedLang = localStorage.getItem('twin_lang');
             if (savedLang && (savedLang === 'ru' || savedLang === 'en')) {
@@ -1952,11 +1945,9 @@
             appState.username = currentLang === 'ru' ? 'Гость' : 'Guest';
         }
 
-        // Применение перевода
         function applyTranslation() {
             const t = translations[currentLang];
             
-            // Инструкция
             document.getElementById('instruction-title').textContent = t.important;
             document.getElementById('instruction-subtitle').textContent = t.mandatory;
             document.getElementById('toggle-text').textContent = t.expand;
@@ -1967,7 +1958,6 @@
             document.getElementById('continue-text').textContent = t.continue;
             document.getElementById('instruction-full-text').innerHTML = t.instructionFull;
             
-            // Авторизация
             document.getElementById('auth-title').textContent = t.authTitle;
             document.getElementById('auth-subtitle').textContent = t.authSubtitle;
             document.getElementById('your-id-label').textContent = t.yourId;
@@ -1975,7 +1965,6 @@
             document.getElementById('id-hint').innerHTML = t.idHint;
             document.getElementById('enter-system').textContent = t.enterSystem;
             
-            // Главный экран
             document.getElementById('game-mines-title').textContent = t.gameMines;
             document.getElementById('game-penalty-title').textContent = t.gamePenalty;
             document.getElementById('game-coinflip-title').textContent = t.gameCoinflip;
@@ -1985,7 +1974,6 @@
             });
             document.getElementById('promo-warning').innerHTML = t.promoWarning;
             
-            // Навигация
             document.querySelectorAll('#nav-games, #nav-games2, #nav-games3').forEach(el => {
                 if (el) el.textContent = t.navGames;
             });
@@ -1999,18 +1987,15 @@
                 if (el) el.textContent = t.online;
             });
             
-            // Профиль
             document.getElementById('signals-made-label').textContent = t.signalsMade;
             document.getElementById('change-id-text').textContent = t.changeId;
             document.getElementById('online-status-text').textContent = t.online;
             
-            // Инструкция из меню
             document.getElementById('menu-instruction-text').innerHTML = t.instructionFull;
             document.getElementById('official-link-text').textContent = t.officialLink;
             document.getElementById('register-text').textContent = t.register;
             document.getElementById('promo-click-text').textContent = t.promoClick;
             
-            // Модальное окно
             document.getElementById('warning-title').textContent = t.warningTitle;
             document.getElementById('warning-text').innerHTML = t.warningText;
             document.getElementById('cancel-text').textContent = t.cancel;
@@ -2020,7 +2005,6 @@
             updateProfileDisplay();
         }
 
-        // Выбор языка
         function selectLanguage(lang) {
             currentLang = lang;
             localStorage.setItem('twin_lang', lang);
@@ -2028,7 +2012,6 @@
             showScreen('instruction');
         }
 
-        // Показать экран
         function showScreen(screenName) {
             Object.values(screens).forEach(s => s?.classList.add('hidden'));
             
@@ -2091,7 +2074,7 @@
                 border-radius: 40px;
                 font-weight: 700;
                 z-index: 10000;
-                box-shadow: 0 10px 30px rgba(0,60,255,0.5);
+                box-shadow: 0 10px 30px rgba(0,102,255,0.5);
                 animation: slideUp 0.3s ease;
             `;
             toast.textContent = message;
@@ -2120,8 +2103,9 @@
             updateProfileDisplay();
         }
 
-        // Модальное окно смены ID
+        // Модальное окно смены ID (ИСПРАВЛЕННОЕ)
         function showChangeIdModal() {
+            const t = translations[currentLang];
             const oldModal = document.getElementById('change-id-modal');
             if (oldModal) oldModal.remove();
 
@@ -2130,27 +2114,32 @@
             modal.className = 'modal-overlay';
             modal.innerHTML = `
                 <div class="modal-content">
-                    <div class="modal-title">${currentLang === 'ru' ? 'СМЕНА ID' : 'CHANGE ID'}</div>
-                    <div class="modal-text">${currentLang === 'ru' ? 'Вы действительно хотите изменить ID?<br>Текущая сессия будет сброшена.' : 'Do you really want to change ID?<br>The current session will be reset.'}</div>
+                    <div class="modal-title">${t.changeIdTitle}</div>
+                    <div class="modal-text">${t.changeIdText}</div>
                     <div class="modal-buttons">
-                        <button class="modal-button cancel" id="modal-cancel">${currentLang === 'ru' ? 'Отмена' : 'Cancel'}</button>
-                        <button class="modal-button confirm" id="modal-confirm">${currentLang === 'ru' ? 'Да, сменить' : 'Yes, change'}</button>
+                        <button class="modal-button cancel" id="modal-cancel-change">${t.changeIdCancel}</button>
+                        <button class="modal-button confirm" id="modal-confirm-change">${t.changeIdConfirm}</button>
                     </div>
                 </div>
             `;
             document.body.appendChild(modal);
 
-            document.getElementById('modal-cancel').addEventListener('click', () => modal.remove());
-            document.getElementById('modal-confirm').addEventListener('click', () => {
+            document.getElementById('modal-cancel-change').addEventListener('click', () => {
+                modal.remove();
+                showScreen('profile');
+            });
+
+            document.getElementById('modal-confirm-change').addEventListener('click', () => {
                 modal.remove();
                 appState.isAuthenticated = false;
                 appState.userId = null;
+                appState.acknowledged = false;
+                appState.registered = false;
                 localStorage.removeItem('twin_user_id');
                 showScreen('instruction');
             });
         }
 
-        // Модальное окно перед игрой
         function showGameModal(gameName, onConfirm) {
             const modal = document.getElementById('game-warning-modal');
             modal.classList.remove('hidden');
@@ -2171,7 +2160,6 @@
 
         // ===== ИГРЫ =====
 
-        // Mines
         function loadMinesGame() {
             const t = translations[currentLang];
             const container = document.getElementById('game-container');
@@ -2295,7 +2283,6 @@
             });
         }
 
-        // Penalty
         function loadPenaltyGame() {
             const t = translations[currentLang];
             const container = document.getElementById('game-container');
@@ -2387,7 +2374,6 @@
             });
         }
 
-        // Coin Flip
         function loadCoinFlipGame() {
             const t = translations[currentLang];
             const container = document.getElementById('game-container');
@@ -2480,7 +2466,6 @@
             });
         }
 
-        // Tower Rush
         function loadTowerGame() {
             const t = translations[currentLang];
             const container = document.getElementById('game-container');
@@ -2599,7 +2584,6 @@
             });
         }
 
-        // Выбор игры
         window.selectGame = function(game) {
             if (!appState.isAuthenticated) {
                 alert(currentLang === 'ru' ? 'Сначала введите ID' : 'Enter ID first');
@@ -2615,7 +2599,6 @@
             });
         };
 
-        // Настройка обработчиков
         function setupEventListeners() {
             document.querySelectorAll('.language-btn').forEach(btn => {
                 btn.addEventListener('click', () => {
@@ -2742,7 +2725,6 @@
             document.getElementById('change-id-btn')?.addEventListener('click', showChangeIdModal);
         }
 
-        // Инициализация
         function initApp() {
             loadSavedData();
             createDots();
