@@ -2131,11 +2131,41 @@
 
             document.getElementById('modal-confirm-change').addEventListener('click', () => {
                 modal.remove();
+                // Полный сброс состояния
                 appState.isAuthenticated = false;
                 appState.userId = null;
                 appState.acknowledged = false;
                 appState.registered = false;
                 localStorage.removeItem('twin_user_id');
+                // Сбрасываем флаги в UI
+                const ackBtn = document.getElementById('acknowledge-btn');
+                const regBtn = document.getElementById('registered-btn');
+                const ackCheck = document.getElementById('ack-check');
+                const regCheck = document.getElementById('reg-check');
+                const continueBtn = document.getElementById('continue-btn');
+                const expandable = document.getElementById('expandable-content');
+                const toggleIcon = document.getElementById('toggle-icon');
+                const toggleText = document.getElementById('toggle-text');
+                
+                if (ackBtn) {
+                    ackBtn.classList.remove('confirmed', 'primary');
+                    ackBtn.classList.add('disabled');
+                    ackBtn.disabled = true;
+                }
+                if (ackCheck) ackCheck.innerHTML = '';
+                if (regBtn) {
+                    regBtn.classList.remove('confirmed', 'primary');
+                    regBtn.classList.add('btn-confirm');
+                }
+                if (regCheck) regCheck.innerHTML = '';
+                if (continueBtn) {
+                    continueBtn.classList.add('disabled');
+                    continueBtn.disabled = true;
+                }
+                if (expandable) expandable.classList.remove('expanded');
+                if (toggleIcon) toggleIcon.textContent = '⬇️';
+                if (toggleText) toggleText.textContent = translations[currentLang].expand;
+                
                 showScreen('instruction');
             });
         }
@@ -2728,7 +2758,14 @@
         function initApp() {
             loadSavedData();
             createDots();
-            showScreen('language');
+            
+            // Если пользователь уже авторизован, сразу показываем главный экран
+            if (appState.isAuthenticated) {
+                showScreen('main');
+            } else {
+                showScreen('language');
+            }
+            
             setupEventListeners();
             applyTranslation();
         }
